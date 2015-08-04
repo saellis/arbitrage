@@ -19,7 +19,7 @@ def profit(chain,exch):
 	trades.append((chain[-1],chain[0])) #add the trade to get back to original currency
 	value = 1.00
 	for t in trades:
-		value *= exch[t]
+		value /= exch[t]
 	return value
 
 def get_rates(n):
